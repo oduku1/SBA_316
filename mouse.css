@@ -1,0 +1,31 @@
+*{
+    cursor: none;
+}
+
+
+.cursor {
+    z-index: 999;
+    position: fixed;
+    background: #2696EB;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696EB,
+                0 0 60px #2696EB,
+                0 0 100px #2696EB;
+    animation: colors 5s infinite;
+    display: none; /* start hidden */
+    transition: width 0.2s ease, height 0.2s ease;
+    transform: translate(-50%, -50%); /* centers dot on cursor */
+  }
+  
+  @keyframes colors {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  

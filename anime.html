@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Guesser</title>
+  <script src="script.js" defer></script>
+  <script src = "mousefollow.js" defer></script>
+  <link rel="stylesheet" href="mouse.css">
+
+  <style>
+    body {
+      background: #121212;
+      color: #EAEAEA;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===== Logo ===== */
+    .logo-wrapper {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 20px auto 0;
+      display: inline-block;
+    }
+
+    #logoimg {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* ===== Container ===== */
+    .container {
+      width: 500px;
+      height: 650px;
+      border: 1px solid #EAEAEA;
+      margin: 20px auto;
+      border-radius: 10px;
+      background-color: #1F1F1F;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+
+    /* ===== Blurred Image ===== */
+    #blurImage {
+      width: 300px;
+      height: 300px;
+      filter: blur(12px);
+      object-fit: cover;
+      border-radius: 8px;
+      user-select: none;
+      transition: filter 0.3s ease;
+    }
+
+    /* ===== Input Row ===== */
+    .input-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .input-row input {
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+
+    .input-row button {
+      background: #FFD369;
+      color: #121212;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: 0.2s ease;
+    }
+
+    .input-row button:hover {
+      background: #e6bf52;
+    }
+
+    /* ===== Guess Counter ===== */
+    .status {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    #guesses {
+      font-weight: bold;
+      color: #FFD369;
+      margin-right: 10px;
+    }
+
+    .wrong-answer {
+      color: #ff4d4d;
+      font-weight: bold;
+    }
+
+    .right-answer{
+        font-weight: bold;
+        color: #1fa61f;
+    }
+
+
+    /* ===== Hint Box ===== */
+    #hintBox {
+      margin-top: 20px;
+      color: #BBBBBB;
+      border: 1px solid #444;
+      width: 400px;
+      height: 200px;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: #2a2a2a;
+      overflow-y: auto;
+      text-align: left;
+    }
+    .hidden{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <a href="index.html">
+  
+    <div class="logo-wrapper">
+      <img id="logoimg" src="logo.png" alt="Guessle Logo">
+    </div>
+  </a>
+
+  <div class="container">
+    <h1 id="charName"></h1>
+    <img id="blurImage" src="" alt="Blurred Character">
+
+    <div class="input-row">
+      <input id="input" type="text" placeholder="Guess the character">
+      <button id="enterBtn">Enter</button>
+      <button id="newBtn">New Round</button>
+    </div>
+
+    <div class="status">
+      Guesses Left: <span id="guesses">10</span> | 
+      <span id = "result" class=""></span>
+    </div>
+
+    <div id="hintBox">
+        <p id = "hint1" class ="hidden"><strong>Anime:</strong> <span id="animeTitle"></span></p>
+        <p id = "hint2" class ="hidden"><strong>Character Hint:</strong> <span id="charDesc"></span></p>
+      </div>
+  </div>
+</body>
+</html>
