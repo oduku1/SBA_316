@@ -118,7 +118,7 @@
       margin-top: 20px;
       color: #BBBBBB;
       border: 1px solid #444;
-      width: 400px;
+      width: 200px;
       height: 200px;
       border-radius: 8px;
       padding: 10px;
@@ -129,6 +129,20 @@
     .hidden{
       display: none;
     }
+
+    #guessBox{
+      margin-top: 20px;
+      color: #BBBBBB;
+      border: 1px solid #444;
+      width: 200px;
+      height: 200px;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: #2a2a2a;
+      overflow-y: auto;
+      text-align: left;
+    }
+
   </style>
 </head>
 <body>
@@ -155,10 +169,16 @@
       <span id = "result" class=""></span>
     </div>
 
-    <div id="hintBox">
+    <div class = "boxes">
+      <div id="hintBox">
         <p id = "hint1" class ="hidden"><strong>Anime:</strong> <span id="animeTitle"></span></p>
         <p id = "hint2" class ="hidden"><strong>Character Hint:</strong> <span id="charDesc"></span></p>
       </div>
+    <div id = "guessBox">
+    </div>
+ 
+
+    </div>
   </div>
 </body>
 </html>
