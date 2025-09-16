@@ -121,6 +121,18 @@
   display: flex;
   gap: 20px; 
 }
+.box {
+  margin-top: 20px;
+  color: #BBBBBB;
+  border: 1px solid #444;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #2a2a2a;
+  overflow-y: auto;
+  text-align: left;
+}
 
 
   </style>
@@ -150,11 +162,11 @@
     </div>
 
     <div class = "boxes">
-      <div id="hintBox">
-        <p id = "hint1" class ="hidden box"><strong>Anime:</strong> <span id="animeTitle"></span></p>
-        <p id = "hint2" class ="hidden box"><strong>Character Hint:</strong> <span id="charDesc"></span></p>
+      <div id="hintBox" class = "box">
+        <p id = "hint1" class ="hidden"><strong>Anime:</strong> <span id="animeTitle"></span></p>
+        <p id = "hint2" class ="hidden "><strong>Character Hint:</strong> <span id="charDesc"></span></p>
       </div>
-    <div id = "guessBox">
+    <div id = "guessBox" class = "box">
     </div>
  
 
