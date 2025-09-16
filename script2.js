@@ -195,6 +195,7 @@ const stadiumEl = document.querySelector("#stadium");
 const locationEl = document.querySelector("#location");
 const blurImage = document.getElementById("blurImage");
 const guessesDisplay = document.getElementById("guesses");
+const list = document.getElementById("list")
 
 let guesses = 10;
 let blurVal = 12;
@@ -211,6 +212,7 @@ function resetRound() {
   randomTeam();
   input.value = "";
   result.textContent = "";
+  list.innerHTML =""
   guesses = 10;
   blurVal = 12;
   blurImage.style.filter = `blur(${blurVal}px)`;
@@ -242,6 +244,10 @@ function guessHandle() {
     blurImage.style.filter = "blur(0px)";
     setTimeout(resetRound, 3000);
   } else {
+    let li = document.createElement("li")
+    li.textContent = input.value
+    list.appendChild(li)
+
     guesses--;
     guessesDisplay.textContent = guesses;
     blurVal -= 1.2;
