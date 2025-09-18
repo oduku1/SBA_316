@@ -1,10 +1,8 @@
 const cursor = document.querySelector(".cursor");
 const buttons = document.querySelectorAll("button")
-let timeout; // declare timeout outside the event listener
+let timeout; 
 
-// follow cursor on mouse move
 document.addEventListener("mousemove", (e) => {
-  // Use e.clientX and e.clientY for the x and y values to fix the cursor issue when scrolling down the page.
   let x = e.clientX;
   let y = e.clientY;
 
@@ -12,7 +10,6 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = x + "px";
   cursor.style.display = "block";
 
-  // cursor effects on mouse stopped
   function mouseStopped() {
     cursor.style.display = "none";
   }

@@ -877,12 +877,12 @@ function guessHandle() {
     blurImage.style.filter = `blur(${blurVal}px)`;
 
     if (guesses === 7) {
-      hint2.classList.remove("hidden"); // character hint
+      hint2.classList.remove("hidden"); 
       charHint.textContent = currentCharacter.character.desc;
     }
 
     if (guesses === 3) {
-      hint1.classList.remove("hidden"); // anime title
+      hint1.classList.remove("hidden"); 
       titleHint.textContent = currentCharacter.anime;
     }
 
