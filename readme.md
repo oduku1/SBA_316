@@ -32,3 +32,8 @@ The blur decreases with each wrong guess, and you get hints along the way!
 - HTML5
 - CSS3 (custom pointer, blur filter)
 - JavaScript (DOM, event listeners, game logic)
+
+
+## Demo Video
+
+![Demo](demo.mp4)
