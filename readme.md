@@ -36,4 +36,4 @@ The blur decreases with each wrong guess, and you get hints along the way!
 
 ## Demo Video
 
-![Demo](demo.mp4)
+![Demo](demo.gif)
